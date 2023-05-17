@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerCtrl : MonoBehaviourPunCallbacks
 {
     [SerializeField] private TextMeshProUGUI _nameTxt;
+    [SerializeField] private Animator _anim;
 
     private void Start()
     {
@@ -33,9 +34,16 @@ public class PlayerCtrl : MonoBehaviourPunCallbacks
 
         bool isMove = moveDirNormal.magnitude > 0;
 
-        if(isMove)
-        { 
+        if (isMove)
+        {
             transform.position += 3.0f * Time.deltaTime * moveDirNormal;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirNormal), 20.0f * Time.deltaTime);
+            _anim.SetBool("IsWalk", true);
+        }
+
+        else
+        { 
+            _anim.SetBool("IsWalk", false);
         }
     }
 }
