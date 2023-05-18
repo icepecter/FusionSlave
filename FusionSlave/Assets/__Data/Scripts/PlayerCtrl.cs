@@ -6,8 +6,11 @@ using TMPro;
 
 public class PlayerCtrl : MonoBehaviourPunCallbacks
 {
+    public PhotonView PV => photonView;
     [SerializeField] private TextMeshProUGUI _nameTxt;
     [SerializeField] private Animator _anim;
+
+    private UISkill _uISkill;
 
     private void Start()
     {
@@ -23,6 +26,8 @@ public class PlayerCtrl : MonoBehaviourPunCallbacks
         { 
             _nameTxt.text = "Ohter";
         }
+
+        _uISkill = FindObjectOfType<UISkill>();
     }
 
     private void Update()
@@ -44,6 +49,11 @@ public class PlayerCtrl : MonoBehaviourPunCallbacks
         else
         { 
             _anim.SetBool("IsWalk", false);
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        { 
+            _uISkill.On();
         }
     }
 }

@@ -333,9 +333,9 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
--r:"C:/Users/monsterslab/Desktop/FusionSlave/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.dll"
--r:"C:/Users/monsterslab/Desktop/FusionSlave/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"C:/Users/monsterslab/Desktop/FusionSlave/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"C:/Users/monsterslab/Desktop/FusionSlave/FusionSlave/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.2/Mono.Cecil.dll"
+-r:"C:/Users/monsterslab/Desktop/FusionSlave/FusionSlave/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/lib/ReportGenerator/ReportGeneratorMerged.dll"
+-r:"C:/Users/monsterslab/Desktop/FusionSlave/FusionSlave/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/BitpackersASMDEF.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/EmoCompressUtilsASMDEF.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/HalfFloatASMDEF.ref.dll"
@@ -616,7 +616,9 @@
 "Assets/__Data/Scripts/CameraLook.cs"
 "Assets/__Data/Scripts/InputHandler.cs"
 "Assets/__Data/Scripts/PlayerCtrl.cs"
+"Assets/__Data/Scripts/UISkill.cs"
 "Assets/__Data/Scripts/UserAPI.cs"
+"Assets/__Data/Test/Test_Management.cs"
 -langversion:9.0
 
 /deterministic

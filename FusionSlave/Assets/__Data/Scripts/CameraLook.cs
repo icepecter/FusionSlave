@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class CameraLook : MonoBehaviour
 {
+    private Transform _mainCamTr;
+
+    private void Awake()
+    {
+        _mainCamTr = Camera.main.transform;
+    }
     private void LateUpdate()
     {
-        transform.LookAt(Camera.main.transform);
+        transform.LookAt(_mainCamTr);
     }
 }
