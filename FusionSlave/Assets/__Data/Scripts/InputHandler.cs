@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputHandler : MonoBehaviour
+public class InputHandler : LocalMonoBehavior
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    protected Vector3 MoveDir;
+
+    public bool IsMove
+    { 
+        get
+        { 
+            return MoveDir.magnitude > 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public Vector3 MoveDirNormal
+    { 
+        get
+        { 
+            return MoveDir.normalized;
+        }
     }
+
 }
