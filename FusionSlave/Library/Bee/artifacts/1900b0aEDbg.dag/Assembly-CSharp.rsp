@@ -618,7 +618,7 @@
 "Assets/__Data/Scripts/PlayerCtrl.cs"
 "Assets/__Data/Scripts/UISkill.cs"
 "Assets/__Data/Scripts/UserAPI.cs"
-"Assets/__Data/Test/Test_Management.cs"
+"Assets/__Data/Test/WebAPI.cs"
 -langversion:9.0
 
 /deterministic
