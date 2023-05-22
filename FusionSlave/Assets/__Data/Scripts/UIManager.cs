@@ -11,8 +11,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        _text.gameObject.SetActive(false);
-        _startBtn.gameObject.SetActive(false);
+        //_text.gameObject.SetActive(false);
+        //_startBtn.gameObject.SetActive(false);
     }
 
     public void SetText(string text)

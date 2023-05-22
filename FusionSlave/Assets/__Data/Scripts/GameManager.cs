@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameState _state;
     [SerializeField] private UIManager _uIManager;
+    [SerializeField] private TimerHandler _timerHandler;
 
     private void Awake()
     {
@@ -35,25 +36,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        PhotonNetwork.Instantiate("Timer", Vector3.zero, Quaternion.identity);
 
-        _state = GameState.InGame;
-        photonView.RPC("UIUpdate", RpcTarget.All);
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        photonView.RPC("UIUpdate", RpcTarget.All);
-    }
-
-    [PunRPC]
-    private void UIUpdate()
-    {
-        RoomInfo info = PhotonNetwork.CurrentRoom;
-
-        int playerCount = PhotonNetwork.CurrentRoom.Players.Count;
-        int playerStartMinCount = 2;
-
-        _uIManager.SetText($"cur : {playerCount} max : {info.MaxPlayers}");
-        _uIManager.BtnActive(playerCount >= playerStartMinCount);
     }
 }
